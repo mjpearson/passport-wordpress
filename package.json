@@ -1,6 +1,6 @@
 {
   "name": "passport-wordpress",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Wordpress OAuth2 strategy for Passport.",
   "keywords": [
     "passport",
@@ -31,6 +31,6 @@
   "engines": {
     "node": ">= 0.4.0"
   },  
-  "_id": "passport-wordpress@0.0.2",
+  "_id": "passport-wordpress@0.0.3",
   "_from": "passport-wordpress@>=0.0.1"
 }
