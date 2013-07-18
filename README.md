@@ -1,27 +1,27 @@
-# Passport-Podio
+# Passport-Wordpress
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
-with [Podio](http://podio.com) using the OAuth 2.0 API.
+with [Wordpress](http://wordpress.com) using the OAuth 2.0 API.
 
 ## Install
 
-    $ npm install passport-podio
+    $ npm install passport-wordpress
 
 ## Usage
 
 #### Configure Strategy
 
-The Podio authentication strategy authenticates users using a Podio
+The Wordpress authentication strategy authenticates users using a Wordpress
 account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a client ID, client secret, and callback URL.
 
-    passport.use(new PodioStrategy({
+    passport.use(new WordpressStrategy({
         clientID: CLIENT_ID,
         clientSecret: CLIENT_SECRET
       },
       function(accessToken, refreshToken, profile, done) {
-        User.findOrCreate({ PodioId: profile.id }, function (err, user) {
+        User.findOrCreate({ WordpressId: profile.id }, function (err, user) {
           return done(err, user);
         });
       }
@@ -29,17 +29,17 @@ accepts these credentials and calls `done` providing a user, as well as
 
 #### Authenticate Requests
 
-Use `passport.authorize()`, specifying the `'Podio'` strategy, to
+Use `passport.authorize()`, specifying the `'Wordpress'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-    app.get('/auth/podio',
-      passport.authorize('podio'));
+    app.get('/auth/wordpress',
+      passport.authorize('wordpress'));
 
-    app.get('/auth/podio/callback', 
-      passport.authorize('podio', { failureRedirect: '/login' }),
+    app.get('/auth/wordpress/callback', 
+      passport.authorize('wordpress', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
         res.redirect('/');
