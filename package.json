@@ -1,0 +1,36 @@
+{
+  "name": "passport-wordpress",
+  "version": "0.0.1",
+  "description": "Wordpress OAuth2 strategy for Passport.",
+  "keywords": [
+    "passport",
+    "wordpress",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mjpearson/passport-wordpress.git"
+  },
+  "bugs": {
+    "url": "http://github.com/mjpearson/passport-wordpress/issues"
+  },  
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib/passport-wordpress",
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "passport-oauth": "~0.1.1"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },  
+  "_id": "passport-wordpress@0.0.1",
+  "_from": "passport-wordpress@>=0.0.1"
+}
